@@ -1,2 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Collections.Generic;
+
+List<string> fruits = new List<string> { "Mango", "Apple", "Banana" };
+
+fruits.Add("Orange");
+
+fruits.Remove("Apple");
+
+Console.WriteLine("Fruits in the list:");
+foreach (string fruit in fruits)
+{
+    Console.WriteLine(fruit);
+}
+
+Dictionary<int, string> fruitDictionary = new Dictionary<int, string>
+{
+    { 1, "Mango" },
+    { 2, "Banana" },
+    { 3, "Orange" }
+};
+
+fruitDictionary.Add(4, "Pineapple");
+
+Console.WriteLine("\nFruits in the dictionary:");
+foreach (var pair in fruitDictionary)
+{
+    Console.WriteLine($"ID: {pair.Key}, Name: {pair.Value}");
+}
